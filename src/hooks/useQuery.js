@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-// take in the url
 function useQuery(url) {
   const [isLoaded, setIsLoaded] = useState(false);
   // rename `posts` to a more generic `data`
@@ -15,10 +14,7 @@ function useQuery(url) {
         setIsLoaded(true);
       });
   }, [url]);
-  // the url is now a dependency
-  // we want to use the side effect whenever the url changes
 
-  // return an *object* with the data and isLoaded state
   return { data, isLoaded };
 }
 

@@ -5,5 +5,4 @@ function useDocumentTitle(pageTitle) {
     document.title = pageTitle;
   }, [pageTitle]);
 }
-
 export default useDocumentTitle;
